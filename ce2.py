@@ -1,4 +1,17 @@
 # Chandelier Exit
+"""
+This code calculates the Chandelier Exit indicator for a given set of financial data, using the ATR (Average True Range)
+to calculate the stop loss levels for long and short positions.
+
+The code begins by importing the necessary libraries (pandas and numpy) and defining the input parameters (length, mult,
+show_labels, use_close, and highlight_state). It then loads the financial data from a CSV file using the pandas library.
+
+The ATR is then calculated using the rolling function in pandas. The long and short stops are calculated by taking the
+maximum and minimum of the previous length highs and lows, respectively, and subtracting or adding the ATR.
+
+The direction of the trend is calculated based on whether the current close price is above the previous short stop or
+below the previous long stop. The colors for the stops are defined as green for long and red for short.
+"""
 
 import matplotlib.pyplot as plt
 import numpy as np
